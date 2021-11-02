@@ -4,7 +4,19 @@ import matplotlib.pyplot as mpp
 MODEL_DT = 0.001
 MODEL_G = 9.81
 
-class Rocket:
+
+class Body:
+    def __init__(self, x, vx):
+        self.x = x
+        self.vx = vx
+        self.sx = []
+    def up(self):
+        self.sx.append(self.x)
+        self.x += self.vx * MODEL_DT
+
+
+
+class Rocket(Body):
     def __init__(self, x, y, m, u, vx):
         self.x = x
         self.y = y
@@ -39,7 +51,7 @@ class Rocket:
             self.sx.append(self.x)
 
 
-a = Rocket(100, 10, 15, 0.001, 50)
+a = Rocket(200, 100, 15, 0.001, 50)
 while a.m > 0:
     a.up()
 
