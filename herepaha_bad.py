@@ -15,6 +15,7 @@ def dra_squar(scale):
         dra_squar(scale-10)
 
 
+
 scal = 400
 
 dra_squar(scal)
