@@ -1,6 +1,6 @@
 import sqlite3 as sl
 from PyQt5 import QtWidgets
-from i_love_animegirl.ui import Ui_MainWindow
+from ui import Ui_MainWindow
 import sys
 
 
